@@ -26,6 +26,7 @@ python3 02_full_batch_generator.py \
     --input_dir clean_contexts \ # тут понятно
     --output_dir api_batches
 ```
+для понимания, файл размеров 2000 батчей обрабатывается примерно 5-10 минут после начала обработки, думаю до 5000 можно закидывать в один файл, но сильно перегибать тоже не надо, анализирует долго
 
 == файлы с батчами падают в папку `api_batches`
 
@@ -44,4 +45,6 @@ python 03_response-processor.py \
     --input_dir api_responses \
     --output_dir processed_data
 ```
-на выходе получаем готовые csv в папке processed_data
+== на выходе получаем готовые csv в папке processed_data
+
+дальше на усмотрение, можно учиться по csv, можно перегнать в jsonl, объединить в один большой и т.д.
